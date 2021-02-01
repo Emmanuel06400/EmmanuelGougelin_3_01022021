@@ -1,3 +1,67 @@
-body {
-    background-color: azure;
+.logo {
+    font-family: Shrikhand;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 1px 4px #ababab;
+    display: inline-block;
 }
+
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: hsl(0deg 0% 90%);
+}
+
+.fa, .fas {
+    margin-block: auto;
+    margin-right: 6%;
+}
+
+.reservation {
+    width: 80%;
+    margin: 3em auto;
+    text-align: center;
+    p {
+        font-weight: 100;
+    }
+}
+
+%shadow {
+    border-radius: 1.6em;
+    box-shadow: 1px 4px 8px #ababab;
+}
+
+.btn {
+    width: fit-content;
+    margin: 2em auto;
+    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    padding: 0.1em 1em;
+    @extend %shadow;
+    p {
+        color: white;
+        font-weight: 400;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.fonctionnement {
+    background-color: white;
+    @extend %shadow
+}
+
