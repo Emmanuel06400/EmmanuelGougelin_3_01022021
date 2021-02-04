@@ -17,6 +17,10 @@ p {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -38,7 +42,7 @@ p {
   font-weight: 100;
 }
 
-.fonctionnement, .btn {
+.resto, .fonction, .btn {
   border-radius: 1.6em;
   box-shadow: 1px 4px 8px #ababab;
 }
@@ -60,6 +64,99 @@ a {
 
 .fonctionnement {
   background-color: white;
+  padding: 1em;
+}
+
+.fonction {
+  background-color: #f2f2f2;
+  display: flex;
+  padding: 0.9em 0em 0.9em 2em;
+  width: 86%;
+  margin: 1.5em auto;
+  position: relative;
+}
+.fonction:hover {
+  background-color: #fff2ff;
+}
+.fonction .cercle {
+  background-color: #9356DC;
+  position: absolute;
+  left: -11px;
+  top: 30px;
+  border-radius: 1em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5em;
+  text-align: center;
+  color: white;
+}
+
+.restaurants {
+  padding: 1em;
+}
+
+.resto {
+  width: 100%;
+  margin: 1em auto 3em;
+  overflow: hidden;
+}
+.resto .resto-image {
+  width: 100%;
+  top: -32px;
+  position: relative;
+  margin-bottom: -1.5em;
+}
+.resto img {
+  width: 100%;
+  height: 16em;
+  object-fit: cover;
+}
+.resto .ville {
+  margin: 0em 1em;
+  position: relative;
+  top: 13px;
+}
+.resto .ville p {
+  margin: 0em;
+  font-weight: 100;
+}
+.resto i {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 1em;
+  font-size: 1.4em;
+}
+.resto .btn-new {
+  position: absolute;
+  background: #abd0bc;
+  top: 4em;
+  right: 1em;
+  padding: 0.7em;
+  color: #3f7055;
+  font-size: 0.8em;
+}
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 1em;
+}
+footer .logo {
+  text-align: left;
+  font-size: 0.7em;
+  box-shadow: none;
+}
+footer ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+footer li {
+  margin: 0.3em;
+}
+footer .fa-hands-helping {
+  margin-right: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */

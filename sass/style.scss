@@ -1,3 +1,10 @@
+
+$fond: #f2f2f2;
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$green: #abd0bc;
+
+
 .logo {
     font-family: Shrikhand;
     width: 100%;
@@ -8,7 +15,7 @@
 
 
 body {
-    background-color: #f2f2f2;
+    background-color: $fond;
     font-family: 'Roboto', sans-serif;
     margin: auto;
 }
@@ -16,6 +23,10 @@ body {
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5em;
 }
 
 .localisation {
@@ -47,7 +58,7 @@ p {
 .btn {
     width: fit-content;
     margin: 2em auto;
-    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    background: linear-gradient(to bottom right,$secondaire, $primaire);
     padding: 0.1em 1em;
     @extend %shadow;
     p {
@@ -62,6 +73,109 @@ a {
 
 .fonctionnement {
     background-color: white;
-    @extend %shadow
+    padding: 1em;
+}
+
+.fonction {
+    @extend %shadow;
+    background-color: $fond;
+    display: flex;
+    padding: 0.9em 0em 0.9em 2em;
+    width: 86%;
+    margin: 1.5em auto;
+    position: relative;
+
+    &:hover {
+    background-color: #fff2ff;
+    }
+
+    .cercle {
+    background-color: $primaire;
+    position: absolute;
+    left: -11px;
+    top: 30px;
+    border-radius: 1em;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+    }
+}
+
+.restaurants {
+    padding: 1em;
+}
+
+.resto {
+    width: 100%;
+    margin: 1em auto 3em;
+    @extend %shadow;
+    overflow: hidden;
+
+    .resto-image {
+        width: 100%;
+        top: -32px;
+        position: relative;
+        margin-bottom: -1.5em;
+    }
+    img {
+        width: 100%;
+        height: 16em;
+        object-fit: cover;
+    }
+
+    .ville {
+        margin: 0em 1em;
+        position: relative;
+        top: 13px;
+        p {
+            margin: 0em;
+            font-weight: 100;
+        }
+    }
+    i {
+        position: relative;
+        top: -20px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 1em;
+        font-size: 1.4em;
+    }
+
+    .btn-new {
+        position: absolute;
+        background: $green;
+        top: 4em;
+        right: 1em;
+        padding: 0.7em;   
+        color: darken($green, 40);
+        font-size: 0.8em;     
+    }
+}
+
+footer {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 1em;
+
+    .logo {
+        text-align: left;
+        font-size: 0.7em;
+        box-shadow: none;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0px;
+    }
+
+    li {
+        margin: 0.3em;
+    }
+
+    .fa-hands-helping {
+        margin-right: 3%;
+    }
 }
 
