@@ -4,6 +4,21 @@ $primaire: #9356DC;
 $secondaire: #FF79DA;
 $green: #abd0bc;
 
+%shadow {
+    border-radius: 1.6em;
+    box-shadow: 1px 4px 8px #ababab;
+}
+
+@keyframes slidedown {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 .logo {
     font-family: Shrikhand;
@@ -50,10 +65,7 @@ h3 {
     }
 }
 
-%shadow {
-    border-radius: 1.6em;
-    box-shadow: 1px 4px 8px #ababab;
-}
+
 
 .btn {
     width: fit-content;
@@ -109,7 +121,7 @@ a {
 
 .resto {
     width: 100%;
-    margin: 1em auto 3em;
+    margin: 1em auto 2em;
     @extend %shadow;
     overflow: hidden;
 
@@ -125,18 +137,18 @@ a {
         object-fit: cover;
     }
 
-    .ville {
+    .description {
         margin: 0em 1em;
         position: relative;
         top: 13px;
         p {
-            margin: 0em;
+            margin: 0.2em;
             font-weight: 100;
         }
     }
     i {
         position: relative;
-        top: -20px;
+        bottom: 20px;
         display: flex;
         flex-direction: row-reverse;
         margin-right: 1em;
@@ -179,3 +191,68 @@ footer {
     }
 }
 
+    /* ---------------------------------menu a la française---------------------------------*/
+
+.fond-menu {
+    width: 100%;
+    margin-bottom: -30px;
+}
+
+.container {
+    border-radius: 33px;
+    background: $fond;
+    overflow: overlay;
+    padding: 1em;
+}
+
+.titre-menu {
+    font-family: Shrikhand;
+    display: flex;
+    justify-content: space-between;
+
+    .fa-heart {
+        margin-block: auto;
+        margin-right: 6%;    }
+}
+
+.plats {
+    font-variant-caps: all-petite-caps;
+    font-size: 1.6em;
+    font-weight: 100;
+}
+
+.ligne {
+    width: 3em;
+    border-bottom: 3px solid $green;
+    margin: 7px 0px 20px;
+}
+
+.plat {
+    @extend %shadow;
+    transition: 1s;
+    animation: slidedown .6s;
+
+    display: flex;
+    padding: 0.6em 1em;
+    position: relative;
+    margin: 1.3em auto;
+
+    .description {
+        width: 100%;
+
+        p {
+            font-weight: 100;
+            margin: 0.2em;
+        }
+
+        strong {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+    }
+
+    .prix {
+        display: flex;
+        justify-content: space-between;
+    }
+}
