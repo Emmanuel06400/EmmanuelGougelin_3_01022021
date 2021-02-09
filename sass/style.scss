@@ -9,6 +9,15 @@ $green: #abd0bc;
     box-shadow: 1px 4px 8px #ababab;
 }
 
+%plat-menu {
+    transition: 1s;
+    animation: slidedown .6s;
+    display: flex;
+    padding: 0.6em 1em;
+    position: relative;
+    margin: 1.3em auto;
+}
+
 @keyframes slidedown {
     from {
         transform: translateY(50px);
@@ -227,17 +236,27 @@ footer {
     margin: 7px 0px 20px;
 }
 
-.plat {
+.plat--05s {
     @extend %shadow;
-    transition: 1s;
-    animation: slidedown .6s;
+    @extend %plat-menu;
+    animation-delay: .05s;
+}
 
-    display: flex;
-    padding: 0.6em 1em;
-    position: relative;
-    margin: 1.3em auto;
+.plat--1s {
+    @extend %shadow;
+    @extend %plat-menu;
+    animation-delay: .1s;
+}
 
-    .description {
+.plat--2s {
+    @extend %shadow;
+    @extend %plat-menu;
+    animation-delay: .2s;
+
+}
+
+
+ .description {
         width: 100%;
 
         p {
@@ -251,8 +270,8 @@ footer {
         }
     }
 
-    .prix {
+.prix {
         display: flex;
         justify-content: space-between;
     }
-}
+

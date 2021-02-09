@@ -1,7 +1,16 @@
 @charset "UTF-8";
-.plat, .resto, .fonction, .btn {
+.plat--2s, .plat--1s, .plat--05s, .resto, .fonction, .btn {
   border-radius: 1.6em;
   box-shadow: 1px 4px 8px #ababab;
+}
+
+.plat--2s, .plat--1s, .plat--05s {
+  transition: 1s;
+  animation: slidedown 0.6s;
+  display: flex;
+  padding: 0.6em 1em;
+  position: relative;
+  margin: 1.3em auto;
 }
 
 @keyframes slidedown {
@@ -205,26 +214,31 @@ footer .fa-hands-helping {
   margin: 7px 0px 20px;
 }
 
-.plat {
-  transition: 1s;
-  animation: slidedown 0.6s;
-  display: flex;
-  padding: 0.6em 1em;
-  position: relative;
-  margin: 1.3em auto;
+.plat--05s {
+  animation-delay: 0.05s;
 }
-.plat .description {
+
+.plat--1s {
+  animation-delay: 0.1s;
+}
+
+.plat--2s {
+  animation-delay: 0.2s;
+}
+
+.description {
   width: 100%;
 }
-.plat .description p {
+.description p {
   font-weight: 100;
   margin: 0.2em;
 }
-.plat .description strong {
+.description strong {
   font-size: 1.2em;
   font-weight: 500;
 }
-.plat .prix {
+
+.prix {
   display: flex;
   justify-content: space-between;
 }
