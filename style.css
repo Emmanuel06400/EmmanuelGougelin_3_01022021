@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.plat--2s, .plat--1s, .plat--05s, .resto, .fonction, .btn {
+.plateau-test, .plat--2s, .plat--1s, .plat--05s, .resto, .fonction, .btn {
   border-radius: 1.6em;
   box-shadow: 1px 4px 8px #ababab;
 }
@@ -21,6 +21,14 @@
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes validation {
+  0% {
+    transform: translateX(9999px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .logo {
@@ -232,6 +240,9 @@ footer .fa-hands-helping {
 .description p {
   font-weight: 100;
   margin: 0.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .description strong {
   font-size: 1.2em;
@@ -240,6 +251,52 @@ footer .fa-hands-helping {
 
 .prix {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.validation {
+  background-color: aqua;
+  width: auto;
+  display: flex;
+  overflow: hidden;
+  transition: transform 4000ms;
+  transform: translateX(100px);
+  transition-property: transform;
+  transition-duration: 1s;
+  transform-origin: right;
+}
+
+.plateau-test {
+  display: flex;
+  padding: 0.6em 1em;
+  margin: 1.3em auto;
+  overflow: hidden;
+}
+.plateau-test p {
+  font-weight: 100;
+  margin: 0.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plateau-test .prix {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.plateau-test :hover + .validation {
+  transform: translateX(0);
+}
+
+.plat-test {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+}
+
+.plat-prix {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 

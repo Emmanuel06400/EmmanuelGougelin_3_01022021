@@ -29,6 +29,15 @@ $green: #abd0bc;
     }
 }
 
+@keyframes validation{
+    0% {
+        transform: translateX(9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .logo {
     font-family: Shrikhand;
     width: 100%;
@@ -262,6 +271,9 @@ footer {
         p {
             font-weight: 100;
             margin: 0.2em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         strong {
@@ -273,5 +285,60 @@ footer {
 .prix {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+
     }
 
+.validation {
+    background-color: aqua;
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    transition: transform 4000ms;
+    transform: translateX(100px);
+    transition-property: transform;
+    transition-duration: 1s;
+    transform-origin: right;
+}
+
+
+
+
+.plateau-test {
+    @extend %shadow;
+    display: flex;
+    padding: 0.6em 1em;
+    margin: 1.3em auto;
+    overflow: hidden;
+
+    p {
+        font-weight: 100;
+        margin: 0.2em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .prix {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    & :hover + .validation {
+        transform: translateX(0);
+        }
+}
+
+
+
+.plat-test {
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+}
+
+.plat-prix {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
