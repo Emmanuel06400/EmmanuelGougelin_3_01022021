@@ -7,3 +7,22 @@ $green: #abd0bc;
     border-radius: 1.6em;
     box-shadow: 1px 4px 8px #ababab;
 }
+
+
+
+
+
+.prix {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@keyframes espace {
+    from {
+        width: 0em;
+    }
+    to {
+        width: 3em;
+    }
+}
