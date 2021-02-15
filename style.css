@@ -1,5 +1,4 @@
-@charset "UTF-8";
-.resto, .fonction, .btn, .commande, .commande--2s, .commande--1s {
+.resto, .fonction, .btn, .commande--2s, .commande--1s, .commande {
   border-radius: 1.6em;
   box-shadow: 1px 4px 8px #ababab;
 }
@@ -51,7 +50,6 @@
     transform: rotate(9deg) scale(1.2);
   }
 }
-/* ---------------menu a la française---------------------------------*/
 .fond-menu {
   width: 100%;
   margin-bottom: -30px;
@@ -72,7 +70,8 @@
   justify-content: space-between;
 }
 .titre-menu .fa-heart {
-  margin-block: auto;
+  display: flex;
+  align-items: center;
   margin-right: 6%;
 }
 
@@ -80,25 +79,6 @@
   width: 3em;
   border-bottom: 3px solid #bfdfd8;
   margin: 7px 0px 20px;
-}
-
-.validation {
-  background-color: #bfdfd8;
-  display: flex;
-  width: 0px;
-  animation-fill-mode: forwards;
-}
-
-.commande--05s {
-  animation-delay: 0.05s;
-}
-
-.commande--1s {
-  animation-delay: 0.1s;
-}
-
-.commande--2s {
-  animation-delay: 0.2s;
 }
 
 .commande {
@@ -144,6 +124,18 @@
   font-weight: bold;
 }
 
+.commande--05s {
+  animation-delay: 0.05s;
+}
+
+.commande--1s {
+  animation-delay: 0.1s;
+}
+
+.commande--2s {
+  animation-delay: 0.2s;
+}
+
 .commande__plat {
   width: 100%;
   display: flex;
@@ -161,6 +153,73 @@
   white-space: nowrap;
 }
 
+.validation {
+  background-color: #bfdfd8;
+  display: flex;
+  width: 0px;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .titre-menu {
+    width: 19em;
+    margin: auto;
+  }
+
+  .entree {
+    width: 52%;
+    margin: auto;
+  }
+
+  .plat-principal {
+    width: 52%;
+    margin: auto;
+  }
+
+  .dessert {
+    width: 52%;
+    margin: auto;
+  }
+
+  .plats, .ligne {
+    width: 52%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .titre-menu {
+    width: 19em;
+    margin: auto;
+  }
+
+  .entree {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .plat-principal {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+
+  .dessert {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+
+  .commande {
+    width: 31%;
+  }
+
+  .plats, .ligne {
+    width: 85%;
+    margin: auto;
+  }
+}
 .logo {
   font-family: Shrikhand;
   width: 100%;
@@ -187,7 +246,7 @@ footer li {
   margin: 0.3em;
 }
 footer .fa-hands-helping {
-  margin-right: 3%;
+  margin-right: 1em;
 }
 
 body {
@@ -200,16 +259,16 @@ h3 {
   font-size: 1.5em;
 }
 
+.fa, .fas {
+  margin-right: 1.4em;
+  align-self: center;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #e6e6e6;
-}
-
-.fa, .fas {
-  margin-block: auto;
-  margin-right: 6%;
 }
 
 .reservation {
@@ -310,6 +369,53 @@ a {
   padding: 0.7em;
   color: #468c7d;
   font-size: 0.8em;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fonction {
+    width: 25%;
+  }
+
+  h3 {
+    width: 100%;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .resto {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fonction {
+    width: 40%;
+  }
+
+  h3 {
+    width: 100%;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .resto {
+    width: 45%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

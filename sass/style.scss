@@ -2,7 +2,7 @@
 @import "libs/menu.scss";
 @import "libs/header-footer.scss";
 
-
+// PROPRIETE GNERALES
 
 body {
     background-color: $fond;
@@ -15,6 +15,13 @@ h3 {
     font-size: 1.5em;
 }
 
+.fa, .fas {
+    margin-right: 1.4em;
+    align-self: center;
+}
+
+// HEADER
+
 .localisation {
     display: flex;
     justify-content: center;
@@ -22,10 +29,7 @@ h3 {
     background-color: hsl(0deg 0% 90%);
 }
 
-.fa, .fas {
-    margin-block: auto;
-    margin-right: 6%;
-}
+// RESERVATION
 
 .reservation {
     width: 80%;
@@ -53,6 +57,8 @@ h3 {
 a {
     text-decoration: none;
 }
+
+// FONCTIONNEMENT
 
 .fonctionnement {
     background-color: white;
@@ -85,6 +91,8 @@ a {
     color: white;
     }
 }
+
+// RESTAURANTS
 
 .restaurants {
     padding: 1em;
@@ -137,4 +145,57 @@ a {
     }
 }
 
+// VERSION DESKTOP
 
+@media screen and (min-width: 1024px){
+
+.fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fonction {
+    width: 25%;
+}
+
+h3 {
+    width: 100%;
+}
+
+.restaurants {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resto {
+    width: 45%;
+}
+
+}
+
+// VERSION TABLETTE
+@media screen and (min-width: 600px) and (max-width: 1023px){
+
+    .fonctionnement {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .fonction {
+        width: 40%;
+    }
+    
+    h3 {
+        width: 100%;
+    }
+    
+    .restaurants {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .resto {
+        width: 45%;
+    }
+    
+    }

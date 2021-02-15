@@ -1,4 +1,4 @@
-    /* ---------------menu a la française---------------------------------*/
+//  HEADER
 
     .fond-menu {
         width: 100%;
@@ -7,6 +7,8 @@
         height: 14em;
     }
     
+    // CONTAINER
+
     .container {
         border-radius: 33px;
         background: $fond;
@@ -20,7 +22,8 @@
         justify-content: space-between;
     
         .fa-heart {
-            margin-block: auto;
+            display: flex;
+            align-items: center;
             margin-right: 6%;    }
     }
 
@@ -30,33 +33,7 @@
         margin: 7px 0px 20px;
     }
 
-    
-    .validation {
-        background-color: $green;
-        display: flex;
-        width: 0px;
-        animation-fill-mode: forwards;
-    
-    }
-    
-    
-    .commande--05s {
-        @extend %commande-animation;
-        animation-delay: .05s;
-    }
-    
-    .commande--1s {
-        @extend %shadow;
-        @extend %commande-animation;
-        animation-delay: .1s;
-    }
-    
-    .commande--2s {
-        @extend %shadow;
-        @extend %commande-animation;
-        animation-delay: .2s;
-    }
-    
+        // MENU
      
     .commande {
         @extend %shadow;
@@ -74,7 +51,6 @@
             color: white;
             align-items: center;
             transform: rotate(0turn);
-    
         }
         
     
@@ -110,10 +86,26 @@
             margin: 0.8em;
             font-weight: bold;
         }
-    
-            
+
     }
     
+    .commande--05s {
+        @extend %commande-animation;
+        animation-delay: .05s;
+    }
+    
+    .commande--1s {
+        @extend %shadow;
+        @extend %commande-animation;
+        animation-delay: .1s;
+    }
+    
+    .commande--2s {
+        @extend %shadow;
+        @extend %commande-animation;
+        animation-delay: .2s;
+    }
+
     .commande__plat {
         width: 100%;
         display: flex;
@@ -130,5 +122,82 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    .validation {
+        background-color: $green;
+        display: flex;
+        width: 0px;
+        animation-fill-mode: forwards;
+    }
     
+    // VERSION TABLETTE
+@media screen and (min-width: 600px) and (max-width: 1023px){
     
+    .titre-menu {
+        width: 19em;
+        margin: auto;
+    }
+
+    .entree {
+        width: 52%;
+        margin: auto;    }
+
+    .plat-principal {
+        width: 52%;
+        margin: auto;  
+    }
+
+    .dessert {
+        width: 52%;
+        margin: auto;  
+    }
+
+    .plats, .ligne {
+        width: 52%;
+        margin: auto;  
+    }
+}
+
+
+// VERSION DESKTOP
+
+@media screen and (min-width: 1024px){
+
+    .titre-menu {
+        width: 19em;
+        margin: auto;
+    }
+
+    .entree {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+     }
+
+    .plat-principal {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .dessert {
+        display: flex; 
+        width: 90%;
+        margin: auto;
+    }
+
+    .commande {
+        width: 31%;
+     }
+
+    .plats, .ligne {
+        width: 85%;
+        margin: auto;  
+    }
+}
+
+
+
+
+
