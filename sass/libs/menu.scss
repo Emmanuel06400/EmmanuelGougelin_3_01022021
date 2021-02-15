@@ -1,0 +1,134 @@
+    /* ---------------menu a la française---------------------------------*/
+
+    .fond-menu {
+        width: 100%;
+        margin-bottom: -30px;
+        object-fit: cover;
+        height: 14em;
+    }
+    
+    .container {
+        border-radius: 33px;
+        background: $fond;
+        overflow: overlay;
+        padding: 1em;
+    }
+    
+    .titre-menu {
+        font-family: Shrikhand;
+        display: flex;
+        justify-content: space-between;
+    
+        .fa-heart {
+            margin-block: auto;
+            margin-right: 6%;    }
+    }
+
+    .ligne {
+        width: 3em;
+        border-bottom: 3px solid $green;
+        margin: 7px 0px 20px;
+    }
+
+    
+    .validation {
+        background-color: $green;
+        display: flex;
+        width: 0px;
+        animation-fill-mode: forwards;
+    
+    }
+    
+    
+    .commande--05s {
+        @extend %commande-animation;
+        animation-delay: .05s;
+    }
+    
+    .commande--1s {
+        @extend %shadow;
+        @extend %commande-animation;
+        animation-delay: .1s;
+    }
+    
+    .commande--2s {
+        @extend %shadow;
+        @extend %commande-animation;
+        animation-delay: .2s;
+    }
+    
+     
+    .commande {
+        @extend %shadow;
+        display: flex;
+        margin: 1.3em auto;
+        overflow: hidden;
+        width: 100%;
+        justify-content: space-between;
+        overflow: hidden;
+    
+        .fa-check-circle {
+            font-size: 1.5em;
+            display: flex;
+            margin: auto;
+            color: white;
+            align-items: center;
+            transform: rotate(0turn);
+    
+        }
+        
+    
+        &:hover .validation {
+            animation: anime .6s;
+            animation-fill-mode: forwards;
+        }
+    
+    
+        &:hover .commande__plat {
+            animation: anime-commande .6s;
+            animation-fill-mode: forwards;
+        }
+    
+        &:hover .fa-check-circle {
+            transform: rotate(-1turn);
+            transition: transform .6s ease-in-out;
+        }
+        
+    
+        p {
+            font-weight: 100;
+            margin: 0.4em 0em 0.2em 0.2em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    
+        .prix {
+            font-size: 1.1em;
+            display: flex;
+            align-items: flex-end;
+            margin: 0.8em;
+            font-weight: bold;
+        }
+    
+            
+    }
+    
+    .commande__plat {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .plat {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    

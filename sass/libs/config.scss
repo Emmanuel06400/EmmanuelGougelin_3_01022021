@@ -1,0 +1,76 @@
+
+//LES COULEURS
+$fond: #f2f2f2;
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$green: #bfdfd8;
+
+//LES POLICES
+$police-logo: 'Shrikhand';
+$police-texte: 'Roboto';
+
+//LES MIXIN
+%shadow {
+    border-radius: 1.6em;
+    box-shadow: 1px 4px 8px #ababab;
+}
+
+%commande-animation {
+    transition: 1s;
+    animation: slidedown 1.3s;
+}
+
+//LES KEYFRAM
+
+@keyframes slidedown {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes anime {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%;
+    }
+}
+
+@keyframes anime-commande {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+
+
+@keyframes witdh {
+    from {
+        width: 0em;
+    }
+    to {
+        width: 3em;
+    }
+}
+
+@keyframes spin-icon {
+
+	from{
+		transform: rotate(0deg) scale(1.2);
+		
+	}
+
+	to{
+		transform: rotate(9deg) scale(1.2);
+	}
+
+}
