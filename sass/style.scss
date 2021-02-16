@@ -20,6 +20,10 @@ h3 {
     align-self: center;
 }
 
+a {
+    color: black;
+}
+
 // HEADER
 
 .localisation {
@@ -75,7 +79,8 @@ a {
     position: relative;
 
     &:hover {
-    background-color: #fff2ff;
+    animation: fonction-color .5s;
+    animation-fill-mode: forwards;
     }
 
     .cercle {
@@ -94,7 +99,7 @@ a {
 
 // RESTAURANTS
 
-.restaurants {
+#restaurants {
     padding: 1em;
 }
 
@@ -162,7 +167,7 @@ h3 {
     width: 100%;
 }
 
-.restaurants {
+#restaurants {
     display: flex;
     flex-wrap: wrap;
 }
@@ -189,7 +194,7 @@ h3 {
         width: 100%;
     }
     
-    .restaurants {
+    #restaurants {
         display: flex;
         flex-wrap: wrap;
     }

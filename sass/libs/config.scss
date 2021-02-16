@@ -66,11 +66,17 @@ $police-texte: 'Roboto';
 
 	from{
 		transform: rotate(0deg) scale(1.2);
-		
 	}
-
 	to{
 		transform: rotate(9deg) scale(1.2);
 	}
+}
 
+@keyframes fonction-color {
+    from {
+        background-color: $fond;
+    }
+    to {
+        background-color: #fff2ff;
+    }
 }

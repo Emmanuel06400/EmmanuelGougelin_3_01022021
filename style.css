@@ -50,6 +50,14 @@
     transform: rotate(9deg) scale(1.2);
   }
 }
+@keyframes fonction-color {
+  from {
+    background-color: #f2f2f2;
+  }
+  to {
+    background-color: #fff2ff;
+  }
+}
 .fond-menu {
   width: 100%;
   margin-bottom: -30px;
@@ -264,6 +272,10 @@ h3 {
   align-self: center;
 }
 
+a {
+  color: black;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -309,7 +321,8 @@ a {
   position: relative;
 }
 .fonction:hover {
-  background-color: #fff2ff;
+  animation: fonction-color 0.5s;
+  animation-fill-mode: forwards;
 }
 .fonction .cercle {
   background-color: #9356DC;
@@ -324,7 +337,7 @@ a {
   color: white;
 }
 
-.restaurants {
+#restaurants {
   padding: 1em;
 }
 
@@ -385,7 +398,7 @@ a {
     width: 100%;
   }
 
-  .restaurants {
+  #restaurants {
     display: flex;
     flex-wrap: wrap;
   }
@@ -408,7 +421,7 @@ a {
     width: 100%;
   }
 
-  .restaurants {
+  #restaurants {
     display: flex;
     flex-wrap: wrap;
   }
