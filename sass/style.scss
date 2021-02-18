@@ -1,8 +1,10 @@
+
 @import "libs/config.scss";
 @import "libs/menu.scss";
 @import "libs/header-footer.scss";
 
-// PROPRIETE GNERALES
+// PROPRIETE GENERALES
+
 
 body {
     background-color: $fond;
@@ -52,9 +54,14 @@ a {
     background: linear-gradient(to bottom right,$secondaire, $primaire);
     padding: 0.1em 1em;
     @extend %shadow;
+    transform: scale(1);
+    transition-duration: .4s;
     p {
         color: white;
         font-weight: 400;
+    }
+    &:hover {
+        transform: scale(1.2);
     }
 }
 
@@ -148,7 +155,22 @@ a {
         color: darken($green, 40);
         font-size: 0.8em;     
     }
+    
 }
+
+.fa-heart {
+    -webkit-background-clip: text;
+    transition: 200ms ease-in;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    &:hover {
+        color: transparent;
+        background-image: linear-gradient(to top, $primaire 0%, $secondaire 100%);
+        -webkit-text-stroke: 0px Black;
+    }
+}
+
+
 
 // VERSION DESKTOP
 

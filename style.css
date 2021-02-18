@@ -3,11 +3,6 @@
   box-shadow: 1px 4px 8px #ababab;
 }
 
-.commande--2s, .commande--1s, .commande--05s {
-  transition: 1s;
-  animation: slidedown 1.3s;
-}
-
 @keyframes slidedown {
   from {
     transform: translateY(50px);
@@ -34,28 +29,62 @@
     width: 75%;
   }
 }
-@keyframes witdh {
-  from {
-    width: 0em;
-  }
-  to {
-    width: 3em;
-  }
-}
-@keyframes spin-icon {
-  from {
-    transform: rotate(0deg) scale(1.2);
-  }
-  to {
-    transform: rotate(9deg) scale(1.2);
-  }
-}
 @keyframes fonction-color {
   from {
     background-color: #f2f2f2;
   }
   to {
     background-color: #fff2ff;
+  }
+}
+h1.loader {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 4.6875em;
+  color: transparent;
+  letter-spacing: 0.01em;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  animation: show-loader 4s forwards;
+  position: fixed;
+  top: -1em;
+  padding-top: 2em;
+}
+
+.loader span {
+  margin: 1em;
+  text-shadow: 0 0 2px rgba(204, 208, 212, 0.9), 0 15px 25px rgba(0, 0, 0, 0.3), 0 -2px 3px rgba(0, 0, 0, 0.1), 0 -5px 10px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.3), 0 3px 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.45);
+  animation: loading 0.85s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+  to {
+    text-shadow: 0 0 2px rgba(204, 208, 212, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes show-loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 55;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 .fond-menu {
@@ -92,9 +121,6 @@
 .commande {
   display: flex;
   margin: 1.3em auto;
-  overflow: hidden;
-  width: 100%;
-  justify-content: space-between;
   overflow: hidden;
 }
 .commande .fa-check-circle {
@@ -133,14 +159,17 @@
 }
 
 .commande--05s {
+  animation: slidedown 1.3s;
   animation-delay: 0.05s;
 }
 
 .commande--1s {
+  animation: slidedown 1.3s;
   animation-delay: 0.1s;
 }
 
 .commande--2s {
+  animation: slidedown 1.3s;
   animation-delay: 0.2s;
 }
 
@@ -297,10 +326,15 @@ a {
   margin: 2em auto;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 0.1em 1em;
+  transform: scale(1);
+  transition-duration: 0.4s;
 }
 .btn p {
   color: white;
   font-weight: 400;
+}
+.btn:hover {
+  transform: scale(1.2);
 }
 
 a {
@@ -382,6 +416,18 @@ a {
   padding: 0.7em;
   color: #468c7d;
   font-size: 0.8em;
+}
+
+.fa-heart {
+  -webkit-background-clip: text;
+  transition: 200ms ease-in;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+.fa-heart:hover {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-stroke: 0px Black;
 }
 
 @media screen and (min-width: 1024px) {

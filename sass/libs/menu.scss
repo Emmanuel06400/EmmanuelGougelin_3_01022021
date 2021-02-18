@@ -33,15 +33,12 @@
         margin: 7px 0px 20px;
     }
 
-        // MENU
+    // MENU
      
     .commande {
         @extend %shadow;
         display: flex;
         margin: 1.3em auto;
-        overflow: hidden;
-        width: 100%;
-        justify-content: space-between;
         overflow: hidden;
     
         .fa-check-circle {
@@ -90,19 +87,19 @@
     }
     
     .commande--05s {
-        @extend %commande-animation;
+        animation: slidedown  1.3s;
         animation-delay: .05s;
     }
     
     .commande--1s {
         @extend %shadow;
-        @extend %commande-animation;
+        animation: slidedown  1.3s;
         animation-delay: .1s;
     }
     
     .commande--2s {
         @extend %shadow;
-        @extend %commande-animation;
+        animation: slidedown  1.3s;
         animation-delay: .2s;
     }
 
