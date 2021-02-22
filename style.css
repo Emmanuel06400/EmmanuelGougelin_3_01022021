@@ -37,7 +37,7 @@
     background-color: #fff2ff;
   }
 }
-h1.loader {
+.loader {
   text-align: center;
   text-transform: uppercase;
   font-family: "Shrikhand", sans-serif;
