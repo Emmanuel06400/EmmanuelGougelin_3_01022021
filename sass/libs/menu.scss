@@ -19,7 +19,7 @@
     .container {
         border-radius: 33px;
         background: $fond;
-        overflow: overlay;
+        position: relative;
         padding: 1em;
     }
     

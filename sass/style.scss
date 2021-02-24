@@ -50,6 +50,7 @@ a {
 
 .btn {
     width: fit-content;
+    width: -moz-fit-content;
     margin: 2em auto;
     background: linear-gradient(to bottom right,$secondaire, $primaire);
     padding: 0.1em 1em;
@@ -88,6 +89,7 @@ a {
     &:hover {
     animation: fonction-color .5s;
     animation-fill-mode: forwards;
+    box-shadow: 1px 4px 8px #929292;
     }
 
     .cercle {

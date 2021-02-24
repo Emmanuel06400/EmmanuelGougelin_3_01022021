@@ -104,7 +104,7 @@
 .container {
   border-radius: 33px;
   background: #f2f2f2;
-  overflow: overlay;
+  position: relative;
   padding: 1em;
 }
 
@@ -284,10 +284,11 @@ footer .logo {
 }
 footer ul {
   list-style-type: none;
-  padding-inline-start: 0px;
+  padding: 0px;
 }
 footer li {
   margin: 0.3em;
+  color: white;
 }
 footer .fa-hands-helping {
   margin-right: 1em;
@@ -330,6 +331,7 @@ a {
 
 .btn {
   width: fit-content;
+  width: -moz-fit-content;
   margin: 2em auto;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 0.1em 1em;
@@ -364,6 +366,7 @@ a {
 .fonction:hover {
   animation: fonction-color 0.5s;
   animation-fill-mode: forwards;
+  box-shadow: 1px 4px 8px #929292;
 }
 .fonction .cercle {
   background-color: #9356DC;
