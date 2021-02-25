@@ -1,6 +1,6 @@
 .resto, .fonction, .btn, .commande--2s, .commande--1s, .commande {
-  border-radius: 1.6em;
-  box-shadow: 1px 4px 8px #ababab;
+  border-radius: 1.1em;
+  box-shadow: 1px 4px 8px #cecece;
 }
 
 @keyframes slidedown {
@@ -119,6 +119,10 @@
   margin-right: 6%;
 }
 
+.plats {
+  text-transform: uppercase;
+}
+
 .ligne {
   width: 3em;
   border-bottom: 3px solid #bfdfd8;
@@ -129,6 +133,7 @@
   display: flex;
   margin: 1.3em auto;
   overflow: hidden;
+  background: white;
 }
 .commande .fa-check-circle {
   font-size: 1.5em;
@@ -292,6 +297,9 @@ footer li {
 }
 footer .fa-hands-helping {
   margin-right: 1em;
+}
+footer a {
+  color: white;
 }
 
 body {
